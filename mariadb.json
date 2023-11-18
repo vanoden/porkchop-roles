@@ -1,0 +1,15 @@
+{
+	"name": "mariadb",
+	"default_attributes": {
+		"personality": "mariadb",
+		"sql_clients": [
+		]
+	},
+	"override_attributes": { },
+	"json_class": "Chef::Role",
+	"description": "Mariadb Database Server",
+	"chef_type": "role",
+	"run_list": [
+		"recipe[mariadb5::setup]"
+	]
+}

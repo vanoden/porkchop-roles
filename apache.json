@@ -1,0 +1,19 @@
+{
+	"name": "apache",
+	"default_attributes": {
+	},
+	"override_attributes": {
+		"personality": "apache"
+	},
+	"json_class": "Chef::Role",
+	"description": "Apache Web Server",
+	"chef_type": "role",
+	"run_list": [
+		"role[unix]",
+		"recipe[apache2::setup]",
+		"recipe[php8::setup]",
+		"recipe[php8::configure]",
+		"recipe[website::configure]",
+		"recipe[website::deploy]"
+	]
+}

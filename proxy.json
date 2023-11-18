@@ -1,0 +1,19 @@
+{
+	"name": "proxy",
+	"default_attributes": {
+		"personality": "proxy"
+	},
+	"override_attributes": {
+		"allow_ports": [
+			80,
+			443
+		]
+	},
+	"json_class": "Chef::Role",
+	"description": "HAProxy Load Balancer",
+	"chef_type": "role",
+	"run_list": [
+		"recipe[haproxy15::setup]",
+		"recipe[haproxy15::configure]"
+	]
+}

@@ -1,0 +1,19 @@
+{
+	"name": "unix",
+	"default_attributes": {
+		"security": {},
+		"http_clients": [],
+		"sql_clients": [],
+		"allow_ports": [
+		]
+	},
+	"override_attributes": { },
+	"json_class": "Chef::Role",
+	"description": "Unix Server",
+	"chef_type": "role",
+	"run_list": [
+		"role[unix]",
+		"recipe[pdns4::setup]",
+		"recipe[pdns4::configure]"
+	]
+}

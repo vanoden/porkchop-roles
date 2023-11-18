@@ -1,0 +1,19 @@
+{
+	"name": "vpn",
+	"default_attributes": {
+		"personality": "vpn",
+		"allow_ports": [
+		],
+		"udp_ports": [
+			1194
+		]
+	},
+	"override_attributes": { },
+	"json_class": "Chef::Role",
+	"description": "VPN Server",
+	"chef_type": "role",
+	"run_list": [
+		"recipe[openvpn24::setup]",
+		"recipe[openvpn24::configure]"
+	]
+}

@@ -1,0 +1,19 @@
+{
+	"name": "standalone",
+	"default_attributes": { },
+	"override_attributes": { },
+	"json_class": "Chef::Role",
+	"description": "Standalone LAMP Server",
+	"chef_type": "role",
+	"run_list": [
+		"recipe[unix::setup]",
+		"recipe[unix::accounts]",
+		"recipe[unix::network]",
+		"recipe[unix::firewall]",
+		"recipe[unix::repos]",
+		"recipe[chef::install]",
+        "recipe[apache2::setup]",
+        "recipe[php7::setup]",
+        "recipe[php7::configure]"
+	]
+}

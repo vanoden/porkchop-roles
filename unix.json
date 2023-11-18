@@ -1,0 +1,17 @@
+{
+	"name": "unix",
+	"default_attributes": { },
+	"override_attributes": { },
+	"json_class": "Chef::Role",
+	"description": "Unix Server",
+	"chef_type": "role",
+	"run_list": [
+		"recipe[unix::setup]",
+		"recipe[unix::accounts]",
+		"recipe[unix::network]",
+		"recipe[unix::firewall]",
+		"recipe[unix::rsyslog]",
+		"recipe[unix::repos]",
+		"recipe[chef::install]"
+	]
+}

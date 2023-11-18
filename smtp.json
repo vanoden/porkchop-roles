@@ -1,0 +1,14 @@
+{
+	"name": "smtp",
+	"default_attributes": {
+		"personality": "smtp",
+		"allow_ports": []
+	},
+	"override_attributes": { },
+	"json_class": "Chef::Role",
+	"description": "Mail Server",
+	"chef_type": "role",
+	"run_list": [
+		"role[unix]"
+	]
+}

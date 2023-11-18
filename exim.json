@@ -1,0 +1,18 @@
+{
+	"name": "apache",
+	"default_attributes": {
+		"allow_ports": [
+		],
+		"http_clients": [
+		]
+	},
+	"override_attributes": {
+	},
+	"json_class": "Chef::Role",
+	"description": "Exim Mail Forwarder",
+	"chef_type": "role",
+	"run_list": [
+		"recipe[exim::setup]",
+		"recipe[spamassassin::setup]"
+	]
+}

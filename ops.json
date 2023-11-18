@@ -1,0 +1,17 @@
+{
+	"name": "ops",
+	"default_attributes": {
+		"personality": "ops",
+		"allow_ports": []
+	},
+	"override_attributes": { },
+	"json_class": "Chef::Role",
+	"description": "Bastion Host",
+	"chef_type": "role",
+	"run_list": [
+		"role[unix]",
+		"recipe[rsyncd::setup]",
+		"recipe[rsyncd::websites]",
+		"recipe[website::sync_repo]"
+	]
+}
