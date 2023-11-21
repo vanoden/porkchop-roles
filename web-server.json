@@ -9,6 +9,10 @@
 	"description": "Apache Web Server",
 	"chef_type": "role",
 	"run_list": [
-		"recipe[unix::setup]"
+		"recipe[unix::setup]",
+		"recipe[unix::accounts]",
+		"recipe[unix::repos]",
+		"recipe[apache2::setup]",
+		"recipe[php8::setup]"
 	]
 }
