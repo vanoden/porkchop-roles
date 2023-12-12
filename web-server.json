@@ -13,6 +13,7 @@
 		"recipe[unix::repos]",
 		"recipe[apache2::setup]",
 		"recipe[php8::setup]",
+		"recipe[website::configure]",
 		"recipe[website::deploy]"
 	]
 }
