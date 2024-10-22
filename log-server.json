@@ -1,0 +1,16 @@
+{
+	"name": "log-server",
+	"default_attributes": {
+	},
+	"override_attributes": {
+		"personality": "log-server"
+	},
+	"json_class": "Chef::Role",
+	"description": "Log Collecting Server",
+	"chef_type": "role",
+	"run_list": [
+		"recipe[unix::setup]",
+		"recipe[unix::repos]",
+		"recipe[rsyslog::server]"
+	]
+}
